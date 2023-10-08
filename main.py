@@ -1,7 +1,7 @@
 from random import choice , shuffle
 from time import sleep
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QRadioButton, QHBoxLayout, QMessageBox, QWidget, QPushButton, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QApplication, QRadioButton, QHBoxLayout, QWidget, QPushButton, QLabel, QVBoxLayout
 
 app = QApplication([])
 
@@ -97,6 +97,31 @@ def menu_show():
     success_lb.setText(f"Успішність: {2/4*100}%")
     menu_win.show()
 
+def menu_hide():
+    menu_win.hide()
+    main.win.show
+
+def clear():
+    le_quest.clear()
+    le_right_ans.clear()
+    le_wrong1.clear()
+    le_wrong2.clear()
+    le_wrong3.clear()
+
+def add_question():
+    new_q = Question(le_quest.text(),
+                     le_right_ans.text(),
+                     le_wrong1.text(),
+                     le_wrong2.text(),
+                     le_wrong3.text(),
+                     )
+
+    questions.append(new_q)
+    clear()
+
+add_btn.clicked.connect(add_question)
+clear_btn.clicked.connect(clear)
+back_btn.clicked.connect(menu_hide)
 answer_btn.clicked.connect(click_btn)
 sleep_btn.clicked.connect(relax)
 menu_btn.clicked.connect(menu_show)

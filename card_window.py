@@ -1,5 +1,5 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QRadioButton, QHBoxLayout, QMessageBox, QWidget, QPushButton, QLabel, QVBoxLayout, QSpinBox, QGroupBox, QButtonGroup
+from PyQt5.QtWidgets import QRadioButton, QHBoxLayout, QPushButton, QLabel, QVBoxLayout, QSpinBox, QGroupBox, QButtonGroup
 
 menu_btn = QPushButton("Меню")
 sleep_btn = QPushButton("Відпочити")
